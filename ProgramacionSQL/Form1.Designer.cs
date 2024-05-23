@@ -41,6 +41,12 @@
             this.buttonCrear = new System.Windows.Forms.Button();
             this.comboBoxRaza = new System.Windows.Forms.ComboBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxHistoria = new System.Windows.Forms.TextBox();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNivelPoder)).BeginInit();
             this.SuspendLayout();
@@ -167,11 +173,71 @@
             this.buttonBuscar.UseVisualStyleBackColor = true;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(538, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Fecha Creacion";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(538, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Historia";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(665, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 16;
+            // 
+            // textBoxHistoria
+            // 
+            this.textBoxHistoria.Location = new System.Drawing.Point(665, 73);
+            this.textBoxHistoria.Name = "textBoxHistoria";
+            this.textBoxHistoria.Size = new System.Drawing.Size(100, 22);
+            this.textBoxHistoria.TabIndex = 17;
+            // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(354, 185);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
+            this.buttonActualizar.TabIndex = 18;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Location = new System.Drawing.Point(517, 185);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.TabIndex = 19;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 473);
+            this.Controls.Add(this.buttonEliminar);
+            this.Controls.Add(this.buttonActualizar);
+            this.Controls.Add(this.textBoxHistoria);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBoxRaza);
             this.Controls.Add(this.buttonCrear);
@@ -210,6 +276,12 @@
         private System.Windows.Forms.Button buttonCrear;
         private System.Windows.Forms.ComboBox comboBoxRaza;
         private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxHistoria;
+        private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.Button buttonEliminar;
     }
 }
 

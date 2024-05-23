@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProgramacionSQL
 {
@@ -40,7 +41,7 @@ namespace ProgramacionSQL
             {
                 MessageBox.Show("Simoncho");
             }
-             else
+            else
             {
                 MessageBox.Show("Nel pastel");
             }
@@ -62,12 +63,15 @@ namespace ProgramacionSQL
             string nombre = textBoxNombre.Text;
             string raza = comboBoxRaza.Text;
             int nivelPoder = (int)numericUpDownNivelPoder.Value;
-            int respuesta = personaje.CrearPersonaje(nombre, raza, nivelPoder);
-            if (respuesta >0)
+            DateTime fecha_creacion = DateTime.Now;
+            string historia = textBoxHistoria.Text;
+            int respuesta = personaje.CrearPersonaje(nombre, raza, nivelPoder, fecha_creacion, historia);
+            if (respuesta > 0)
             {
                 MessageBox.Show("Creado con exito");
                 dataGridViewPersonajes.DataSource = personaje.LeerPersonajes();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Algo hiciste mal");
             }
@@ -87,20 +91,68 @@ namespace ProgramacionSQL
                 string nombre = personajeEncontrado.Rows[0]["nombre"].ToString();
                 string raza = personajeEncontrado.Rows[0]["raza"].ToString();
                 int niverlPoder = int.Parse(personajeEncontrado.Rows[0]["nivel_poder"].ToString());
+                DateTime fecha_creacion = (DateTime)personajeEncontrado.Rows[0]["fecha_creacion"];
+                string historia = personajeEncontrado.Rows[0]["historia"].ToString();
                 textBoxNombre.Text = nombre;
                 comboBoxRaza.Text = raza;
                 numericUpDownNivelPoder.Value = niverlPoder;
+                dateTimePicker1.Value = fecha_creacion;
+                textBoxHistoria.Text = historia;
             }
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
-          BuscarPorId();
+            BuscarPorId();
         }
 
         private void textBoxID_Leave(object sender, EventArgs e)
         {
             BuscarPorId();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBoxID.Text);
+            string nombre = textBoxNombre.Text;
+            string raza = comboBoxRaza.Text;
+            int nivelPoder = (int)numericUpDownNivelPoder.Value;
+            string historia = textBoxHistoria.Text;
+            int respuesta = personaje.ActualizarPersonaje(id, nombre, raza, nivelPoder, historia);
+            if (respuesta > 0)
+            {
+                MessageBox.Show("Si se pudo tilin");
+                dataGridViewPersonajes.DataSource = personaje.LeerPersonajes();
+            }
+            else
+            {
+                MessageBox.Show("Algo hiciste mal");
+            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBoxID.Text);
+            int respuesta = personaje.BorrarPersonaje(id);
+            if (respuesta > 0)
+            {
+                MessageBox.Show("Si se pudo mi rey");
+                textBoxID.Clear();
+                textBoxNombre.Clear();
+                comboBoxRaza.SelectedIndex = -1;
+                numericUpDownNivelPoder.Value = 0;
+                textBoxHistoria.Clear();
+                dataGridViewPersonajes.DataSource = personaje.LeerPersonajes();
+            }
+            else
+            {
+                MessageBox.Show("Algo hiciste mal");
+            }
         }
     }
 }
