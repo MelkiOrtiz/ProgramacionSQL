@@ -47,15 +47,17 @@
             this.textBoxHistoria = new System.Windows.Forms.TextBox();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNivelPoder)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonPrueba
             // 
-            this.buttonPrueba.Location = new System.Drawing.Point(732, 255);
+            this.buttonPrueba.Location = new System.Drawing.Point(404, 209);
             this.buttonPrueba.Name = "buttonPrueba";
-            this.buttonPrueba.Size = new System.Drawing.Size(155, 23);
+            this.buttonPrueba.Size = new System.Drawing.Size(209, 23);
             this.buttonPrueba.TabIndex = 0;
             this.buttonPrueba.Text = "Prueba de conexion";
             this.buttonPrueba.UseVisualStyleBackColor = true;
@@ -64,18 +66,18 @@
             // dataGridViewPersonajes
             // 
             this.dataGridViewPersonajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonajes.Location = new System.Drawing.Point(12, 242);
+            this.dataGridViewPersonajes.Location = new System.Drawing.Point(12, 267);
             this.dataGridViewPersonajes.Name = "dataGridViewPersonajes";
             this.dataGridViewPersonajes.RowHeadersWidth = 51;
             this.dataGridViewPersonajes.RowTemplate.Height = 24;
-            this.dataGridViewPersonajes.Size = new System.Drawing.Size(692, 219);
+            this.dataGridViewPersonajes.Size = new System.Drawing.Size(601, 194);
             this.dataGridViewPersonajes.TabIndex = 1;
             // 
             // buttonCargar
             // 
-            this.buttonCargar.Location = new System.Drawing.Point(770, 203);
+            this.buttonCargar.Location = new System.Drawing.Point(404, 165);
             this.buttonCargar.Name = "buttonCargar";
-            this.buttonCargar.Size = new System.Drawing.Size(117, 28);
+            this.buttonCargar.Size = new System.Drawing.Size(209, 28);
             this.buttonCargar.TabIndex = 2;
             this.buttonCargar.Text = "Cargar Datos";
             this.buttonCargar.UseVisualStyleBackColor = true;
@@ -122,7 +124,7 @@
             // 
             this.textBoxID.Location = new System.Drawing.Point(161, 24);
             this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(100, 22);
+            this.textBoxID.Size = new System.Drawing.Size(200, 22);
             this.textBoxID.TabIndex = 7;
             this.textBoxID.Leave += new System.EventHandler(this.textBoxID_Leave);
             // 
@@ -130,7 +132,7 @@
             // 
             this.textBoxNombre.Location = new System.Drawing.Point(161, 60);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(100, 22);
+            this.textBoxNombre.Size = new System.Drawing.Size(200, 22);
             this.textBoxNombre.TabIndex = 8;
             // 
             // numericUpDownNivelPoder
@@ -142,14 +144,14 @@
             0,
             0});
             this.numericUpDownNivelPoder.Name = "numericUpDownNivelPoder";
-            this.numericUpDownNivelPoder.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownNivelPoder.Size = new System.Drawing.Size(200, 22);
             this.numericUpDownNivelPoder.TabIndex = 10;
             // 
             // buttonCrear
             // 
-            this.buttonCrear.Location = new System.Drawing.Point(55, 185);
+            this.buttonCrear.Location = new System.Drawing.Point(15, 21);
             this.buttonCrear.Name = "buttonCrear";
-            this.buttonCrear.Size = new System.Drawing.Size(75, 23);
+            this.buttonCrear.Size = new System.Drawing.Size(75, 37);
             this.buttonCrear.TabIndex = 11;
             this.buttonCrear.Text = "Crear";
             this.buttonCrear.UseVisualStyleBackColor = true;
@@ -160,14 +162,14 @@
             this.comboBoxRaza.FormattingEnabled = true;
             this.comboBoxRaza.Location = new System.Drawing.Point(160, 103);
             this.comboBoxRaza.Name = "comboBoxRaza";
-            this.comboBoxRaza.Size = new System.Drawing.Size(184, 24);
+            this.comboBoxRaza.Size = new System.Drawing.Size(201, 24);
             this.comboBoxRaza.TabIndex = 12;
             // 
             // buttonBuscar
             // 
-            this.buttonBuscar.Location = new System.Drawing.Point(313, 24);
+            this.buttonBuscar.Location = new System.Drawing.Point(15, 72);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 37);
             this.buttonBuscar.TabIndex = 13;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -176,7 +178,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(538, 27);
+            this.label5.Location = new System.Drawing.Point(52, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 16);
             this.label5.TabIndex = 14;
@@ -186,7 +188,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(538, 76);
+            this.label6.Location = new System.Drawing.Point(52, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 15;
@@ -195,23 +197,23 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(665, 24);
+            this.dateTimePicker1.Location = new System.Drawing.Point(161, 177);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // textBoxHistoria
             // 
-            this.textBoxHistoria.Location = new System.Drawing.Point(665, 73);
+            this.textBoxHistoria.Location = new System.Drawing.Point(160, 209);
             this.textBoxHistoria.Name = "textBoxHistoria";
-            this.textBoxHistoria.Size = new System.Drawing.Size(100, 22);
+            this.textBoxHistoria.Size = new System.Drawing.Size(201, 22);
             this.textBoxHistoria.TabIndex = 17;
             // 
             // buttonActualizar
             // 
-            this.buttonActualizar.Location = new System.Drawing.Point(354, 185);
+            this.buttonActualizar.Location = new System.Drawing.Point(113, 72);
             this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(75, 23);
+            this.buttonActualizar.Size = new System.Drawing.Size(75, 37);
             this.buttonActualizar.TabIndex = 18;
             this.buttonActualizar.Text = "Actualizar";
             this.buttonActualizar.UseVisualStyleBackColor = true;
@@ -219,28 +221,38 @@
             // 
             // buttonEliminar
             // 
-            this.buttonEliminar.Location = new System.Drawing.Point(517, 185);
+            this.buttonEliminar.Location = new System.Drawing.Point(113, 21);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 37);
             this.buttonEliminar.TabIndex = 19;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonCrear);
+            this.groupBox1.Controls.Add(this.buttonActualizar);
+            this.groupBox1.Controls.Add(this.buttonEliminar);
+            this.groupBox1.Controls.Add(this.buttonBuscar);
+            this.groupBox1.Location = new System.Drawing.Point(404, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(209, 123);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Gestión De Datos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 473);
-            this.Controls.Add(this.buttonEliminar);
-            this.Controls.Add(this.buttonActualizar);
+            this.ClientSize = new System.Drawing.Size(676, 473);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxHistoria);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.buttonBuscar);
             this.Controls.Add(this.comboBoxRaza);
-            this.Controls.Add(this.buttonCrear);
             this.Controls.Add(this.numericUpDownNivelPoder);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.textBoxID);
@@ -256,6 +268,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonajes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNivelPoder)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +295,7 @@
         private System.Windows.Forms.TextBox textBoxHistoria;
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

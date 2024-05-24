@@ -14,6 +14,7 @@ namespace ProgramacionSQL.Data.DataAcces
         private String connectionString = "Server=localhost;Database=db_universidad;Uid=root;Pwd=Melki-2004";
         public bool ProbarConexion()
         {
+            //Concepto "MySqlConnection"
             using (MySqlConnection conection = new MySqlConnection(connectionString))
             {
                 try
@@ -34,8 +35,10 @@ namespace ProgramacionSQL.Data.DataAcces
                 connection.Open();
 
                 string sql = "SELECT * FROM personajes_dragon_ball";
+                // Concepto "MySqlCommand"
                 using (MySqlCommand command = new MySqlCommand(sql, connection))
                 {
+                    //Concepto "MySqlDataAdapter"
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
                         adapter.Fill(personajes);
@@ -52,16 +55,17 @@ namespace ProgramacionSQL.Data.DataAcces
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-
+                // concepto "@param"
                 string sql = "INSERT INTO personajes_dragon_ball (nombre, raza, nivel_poder, fecha_creacion, historia) VALUES (@nombre, @raza, @nivelPoder, @fecha_creacion, @historia)";
                 using (MySqlCommand command = new MySqlCommand(sql, connection))
                 {
+                    //concepto "command.Parameters.AddWithValue"
                     command.Parameters.AddWithValue("@nombre", nombre);
                     command.Parameters.AddWithValue("@raza", raza);
                     command.Parameters.AddWithValue("@nivelPoder", nivelPoder);
                     command.Parameters.AddWithValue("@fecha_creacion", fecha_creacion);
                     command.Parameters.AddWithValue("@historia", historia);
-
+                    //concepto "ExecuteNonQuery"
                     return command.ExecuteNonQuery();
                 }
             }
@@ -83,6 +87,7 @@ namespace ProgramacionSQL.Data.DataAcces
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
+                        //Concepto "adapter.Fill(personajes)"3
                         adapter.Fill(personaje);
                     }
                 }

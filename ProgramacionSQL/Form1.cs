@@ -115,7 +115,7 @@ namespace ProgramacionSQL
         {
 
         }
-
+        //Boton Agregado-----------------------------------
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBoxID.Text);
@@ -134,14 +134,14 @@ namespace ProgramacionSQL
                 MessageBox.Show("Algo hiciste mal");
             }
         }
-
+        //Boton Agregado------------------------------------------
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBoxID.Text);
             int respuesta = personaje.BorrarPersonaje(id);
             if (respuesta > 0)
             {
-                MessageBox.Show("Si se pudo mi rey");
+                MessageBox.Show("Si se pudo Tilin ");
                 textBoxID.Clear();
                 textBoxNombre.Clear();
                 comboBoxRaza.SelectedIndex = -1;
